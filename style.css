@@ -21,6 +21,20 @@ body{
     image-rendering: pixelated;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    margin: 0rem 3rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.col1, .col3 {
+    display: flex;
+    flex-direction: column; /* => empile les éléments verticalement */
+    gap: 0.25rem;
+}
+
 .uibox{
     display: flex;
     padding: 0.8rem;
@@ -44,6 +58,7 @@ body{
     outline: 0.17rem solid #db9532;
     outline-offset: -0.3rem;
     text-align: center;
+    align-items: center;
     justify-content: center;
     gap: 0.5rem;
     box-shadow: 3px 3px 0 #0000004e;
@@ -51,12 +66,43 @@ body{
 
 .uibox3{
     display: flex;
-    padding: 0.5rem;
+    flex-direction: row;
+    margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+    padding: 0.2rem 0.5rem;
     outline: 0.17rem solid #ffffff;
-    outline-offset: -0.3rem;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    background-color: #534d4a;
+}
+
+.uibox3 img, .arrow {
+    display: block;
+    image-rendering: pixelated;
+    width: 0.5rem; 
+    height: auto; 
+}
+
+.intro:hover .arrowfull{
+    content: url("images/nav/arrow-left-full-hover.png");
+}
+
+.intro{
+    color: aliceblue;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.intro:hover{
+    color: #ffdd64;
+}
+
+.arrowfull {
+    display: block;
+    image-rendering: pixelated;
+    width: 0.5rem;
+    height: 0.8rem;
 }
 
 .navbar{
@@ -68,30 +114,28 @@ body{
 
 }
 
-a:hover, a.active {
-    color: #fcc846;
+a:hover  {
+    color: #fcc846 !important;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 0rem 0 2rem;
+a.active {
+  color: #ffdd64;
 }
 
 .choixpersonnages {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    gap: 0.2rem;
+    width: 100%;
+    justify-content: center;
+    gap: 0.3rem;
 }
-
-
 
 .picto,
 .picto-hover{
     image-rendering: pixelated;
    vertical-align: top;
-    width: 2.3rem;
+    width: 2.5rem;
 }
 
 .picto-hover{
@@ -103,12 +147,6 @@ a:hover, a.active {
 .picto-personnages:hover .picto-hover{
    display: block;
 } 
-
-.col1 {
-display: flex;
-  flex-direction: column; /* => empile les éléments verticalement */
-  gap: 0.25rem;
-}
 
 @media screen and (max-width: 900px) {
     *{
