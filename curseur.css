@@ -1,0 +1,22 @@
+/* Curseur normal (par défaut partout) */
+body {
+  cursor: url('images/curseur/default32.PNG'), default;
+}
+
+/* Curseur lien ou bouton */
+a,
+button {
+  cursor: url('images/curseur/default32.PNG'), pointer;
+}
+
+/* Curseur pour champs texte */
+input[type="text"],
+textarea {
+  cursor: url('images/curseur/cursor_textwrite.cur'), text;
+}
+
+/* Curseur d'aide ou tooltip */
+.tooltip{
+  cursor: url('images/curseur/tooltip32.PNG'), help;
+}
+

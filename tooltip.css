@@ -1,0 +1,100 @@
+/* infobulles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    max-width: 16.4rem;
+    padding: 1.2rem;
+    background-color: #2b2222f0;
+    border-color: bisque;
+    border: 0.17rem solid black;
+    outline: 0.17rem solid #db9532;
+    outline-offset: -0.3rem;
+    text-align: justify left;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 3px 3px 0 #0000004e;
+    z-index: 10;
+    left: -19.7rem;
+    top: -2.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* La flèche */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 1.15rem; /* pointe vers l'élément */
+  left: 100%;
+  rotate: -90deg;
+  border-width: 0.5rem;
+  margin-top: 1rem;
+  border-style: solid;
+  border-color: #db9532 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* bottom arrow */
+
+.tooltip .tooltiptext-bottom {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    max-width: 16.4rem;
+    padding: 1.2rem;
+    background-color: #2b2222f0;
+    border-color: bisque;
+    border: 0.17rem solid black;
+    outline: 0.17rem solid #db9532;
+    outline-offset: -0.3rem;
+    text-align: justify left;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 3px 3px 0 #0000004e;
+    z-index: 10;
+    left: -19.7rem;
+    bottom: 0.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* La flèche */
+.tooltip .tooltiptext-bottom::after {
+  content: "";
+  position: absolute;
+  top: 1.15rem; /* pointe vers l'élément */
+  left: 100%;
+  rotate: -90deg;
+  border-width: 0.5rem;
+  margin-top: 5.3rem;
+  border-style: solid;
+  border-color: #db9532 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext-bottom {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.skills img{
+    display: block;
+    image-rendering: pixelated;
+    width: 2rem; 
+    height: auto; 
+}
