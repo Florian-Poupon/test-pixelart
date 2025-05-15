@@ -15,10 +15,44 @@ body{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url("images/background-astarion.jpg");
+    overflow: hidden;
+
+}
+
+.sky{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/sky.jpg');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  animation: scroll-sky 120s linear infinite;
+    image-rendering: pixelated;
+  z-index: -9999;
+
+}
+
+.decor {
+    position: absolute;
+    background: url('images/decor-astarion.png');
     background-size: cover;
     background-position: center;
-    image-rendering: pixelated;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+        image-rendering: pixelated;
+    z-index: -9998;
+}
+
+@keyframes scroll-sky {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .container {
@@ -177,7 +211,9 @@ a.active {
 } 
 .picto-personnages:hover .picto-hover{
    display: block;
-} * format tablette et smartphone */
+} 
+
+/* format tablette et smartphone */
 
 @media screen and (max-width: 900px) {
     *{
