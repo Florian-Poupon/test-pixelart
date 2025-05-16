@@ -1,22 +1,22 @@
 /* Curseur normal (par défaut partout) */
 body {
-  cursor: url('images/curseur/default32.PNG'), default;
+  cursor: url('images/curseur/default64.PNG'), default;
 }
 
 /* Curseur lien ou bouton */
 a,
 button {
-  cursor: url('images/curseur/default32.PNG'), pointer;
+  cursor: url('images/curseur/link64.PNG'), pointer;
 }
 
 /* Curseur pour champs texte */
 input[type="text"],
 textarea {
-  cursor: url('images/curseur/cursor_textwrite.cur'), text;
+  cursor: url('images/curseur/txt64.PNG'), text;
 }
 
 /* Curseur d'aide ou tooltip */
 .tooltip{
-  cursor: url('images/curseur/tooltip32.PNG'), help;
+  cursor: url('images/curseur/tooltip64-2.PNG'), help;
 }
 
